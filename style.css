@@ -1,0 +1,469 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+body {
+  min-height: 100vh;
+}
+html {
+  font-size: 62.5%;
+}
+header {
+  background-color: white;
+  min-height: 6rem;
+  display: flex;
+  font-size: 1.6rem;
+  color: #676767;
+  text-align: center;
+  align-self: center;
+}
+header img {
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 4rem;
+}
+header h1 {
+  position: absolute;
+  top: 0.6rem;
+  right: 5rem;
+  letter-spacing: 0.3rem;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to bottom right, #48c993, #40bb95, #3aae97);
+  font-family: poppins;
+  min-height: 5rem;
+  width: 100%;
+  top: 0;
+}
+.navlinks {
+  display: flex;
+  justify-content: space-around;
+  width: 55%;
+}
+.navlinks li {
+  list-style: none;
+}
+.navlinks a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.3rem;
+  transition-duration: 300ms;
+  align-items: center;
+}
+.navlinks a:hover {
+  background-color: white;
+  color: #3aae97;
+  font-weight: 600;
+}
+.slider {
+  height: 84.2vh;
+  width: 100%;
+  overflow: hidden;
+}
+.slides {
+  height: 84.2vh;
+  width: 500%;
+  animation: slider infinite 30s 4s;
+}
+.image {
+  height: 84.2vh;
+  width: 20%;
+  float: left;
+  position: relative;
+}
+.image:nth-child(1) {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/daniele-franchi-N-4lwl43-tQ-unsplash1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image:nth-child(2) {
+  background-image: url(images/251.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.image:nth-child(3) {
+  background-image: url(images/241.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.image:nth-child(4) {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/171.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.image:nth-child(5) {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/daniele-franchi-N-4lwl43-tQ-unsplash1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.text:nth-child(1) {
+  animation: transitionIn 700ms ease forwards 8s;
+}
+.text:nth-child(2) {
+  animation: transitonIn 700ms ease forwards 14s;
+}
+.text:nth-child(3){
+  animation: transitionIn 700ms ease forwards 22s;
+}
+@keyframes slider {
+  12.5% {
+    margin-left: -100%;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  37.5% {
+    margin-left: -200%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  62.5% {
+    margin-left: -300%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  87.5% {
+    margin-left: -400%;
+  }
+  100% {
+    margin-left: -400%;
+  }
+}
+.headertext h2 {
+  color: white;
+  position: relative;
+  font-size: 5.5rem;
+  width: 60rem;
+  top: 16rem;
+  left: 5rem;
+  opacity: 0;
+  animation: transitionIn 700ms ease forwards;
+  animation-delay: 700ms;
+}
+.headertext button {
+  border: none;
+  padding: 1.8rem 3rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  position: relative;
+  left: 6rem;
+  top: 19rem;
+  background: #48c993;
+  color: white;
+  transition-duration: 300ms;
+  cursor: pointer;
+  opacity: 0;
+  animation: transitionIn 700ms ease forwards;
+  animation-delay: 1.5s;
+}
+.headertext button:hover {
+  background-color: white;
+  color: #2f976c;
+}
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.text {
+  font-size: 1.6rem;
+  width: 38rem;
+  text-align: left;
+  padding: 3rem;
+  background: linear-gradient(to bottom right, #48c993c9, #40bb9450, #3aae97b2);
+  color: white;
+  position: relative;
+  left: 66%;
+  top: 25%;
+  opacity:0;
+}
+.bloghead {
+  background: linear-gradient(to bottom right, #36a879a8, #21775c5b, #1652462c),
+    url(images/head.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 26rem;
+  animation: transitionIn 900ms ease forwards;
+}
+.bloghead h1 {
+  font-size: 6rem;
+  letter-spacing: 0.5rem;
+  color: white;
+  padding-top: 7.5rem;
+  text-align: center;
+}
+.blogposts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  margin: 5rem 7.5rem;
+  width: 90%;
+  min-height: 100vh;
+  animation: transitionIn 500ms ease forwards;
+}
+.blogposts img {
+  height: 25rem;
+  width: 38.7rem;
+}
+.blog {
+  width: 39rem;
+  height: 55rem;
+  margin: 1rem 2rem;
+  align-items: center;
+  transition-duration: 300ms;
+  border: 0.12rem solid rgb(228, 228, 228);
+  transform: scale(0.95);
+}
+.blog:hover {
+  box-shadow: 0.5rem 0.5rem 2rem rgb(198, 198, 198);
+}
+.blogposts h2 {
+  width: 39rem;
+  font-size: 1.9rem;
+  padding: 1.7rem;
+  text-align: center;
+  color: #4d4d4d;
+  font-weight: 700;
+}
+.blogposts button {
+  width: 18rem;
+  height: 5rem;
+  margin: 2.5rem 26%;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  background: linear-gradient(to bottom right, #48c993, #40bb95, #3aae97);
+  border: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+.blogposts button:hover {
+  transform: scale(1.03);
+}
+.blogposts p {
+  width: 39rem;
+  font-size: 1.5rem;
+  padding: 0 2rem;
+  text-align: center;
+  color: #6e6e6e;
+}
+.blogposts a {
+  text-decoration: none;
+}
+.gallery {
+  margin: 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+}
+.gallery img {
+  width: 29rem;
+  height: 23rem;
+  margin: 1.5rem 1.5rem;
+  filter: brightness(70%);
+  transition-duration: 400ms;
+  cursor: pointer;
+}
+.gallery img:hover {
+  filter: brightness(100%);
+  box-shadow: 0.7rem 0.7rem 0.9rem rgb(168, 168, 168);
+}
+.blogpage {
+  min-height: 100vh;
+}
+.aboutbody {
+  width: 75%;
+  font-size: 1.6rem;
+  padding: 3rem 6rem;
+  margin: 2rem auto;
+  border-radius: 0rem;
+  color:#6e6e6e;
+  display: flex;
+}
+.container {
+  min-height: 100vh;
+}
+.adoptsec {
+  min-height: 100vh;
+  margin-bottom: 5rem;
+}
+.animals {
+  display: flex;
+  justify-content: space-evenly;
+}
+.adopthead h3 {
+  background: linear-gradient(to bottom right, #48c993, #40bb95, #279680);
+  font-size: 2.8rem;
+  text-align: center;
+  width: 83%;
+  margin: 3rem auto;
+  color: white;
+  font-weight: 600;
+  padding: 2em 4rem;
+}
+.adopt h3 {
+  margin: 1rem auto;
+  width: 80%;
+  text-align: center;
+  font-size: 2.8rem;
+}
+.animals {
+  margin-top: 5rem;
+}
+.adopt {
+  height: 40rem;
+  width: 30rem;
+  transition-duration: 300ms;
+  border: 0.12rem solid rgb(228, 228, 228);
+}
+.adopt h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 2.3rem;
+  color: #676767;
+}
+
+.adopt img {
+  width: 100%;
+  height: 27rem;
+}
+.adopt button {
+  border: none;
+  background: linear-gradient(to bottom right, #48c993, #40bb95, #3aae97);
+  color: white;
+  letter-spacing: 0.2rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  transition-duration: 500ms;
+  margin: 0rem 34%;
+  cursor: pointer;
+}
+.adopt button:hover {
+  transform: scale(1.05);
+}
+.adopt:hover {
+  box-shadow: 0.5rem 0.5rem 2rem rgb(198, 198, 198);
+}
+.adoptform {
+  min-height: 130vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form {
+  width: 100%;
+  padding: 4rem 6rem;
+  margin: auto 0;
+  position: relative;
+  border-radius: 0.5rem;
+  display: flex;
+}
+.inputfields {
+  width: 70%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.inputs {
+  border: 0;
+  padding: 1rem 4rem;
+  width: 70%;
+  height: 5rem;
+  margin-top: 2rem;
+  border-bottom: 0.15rem solid rgb(137, 170, 241);
+}
+.submit {
+  background-color: rgb(255, 204, 0);
+  border: transparent;
+  width: 18rem;
+  height: 5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.2rem;
+  transition-duration: 500ms;
+  margin: 4rem auto;
+  cursor: pointer;
+}
+.button button:hover {
+  background-color: rgb(233, 159, 0);
+  transform: scale(1.05);
+}
+.blogbody {
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 15rem;
+  color: #6e6e6e;
+  opacity: 0;
+  animation: transitionIn 500ms ease forwards;
+}
+.blogbody h1 {
+  font-size: 3.1rem;
+  margin: 4rem 0;
+  text-align: left;
+  color: #39645b;
+  padding:1rem 2rem;
+  border-left: 0.6rem solid #3aae97;
+}
+.blogbody p {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  text-align: left;
+  width:95%;
+}
+.blogbody img {
+  height: 60%;
+  width: 90%;
+  margin: 1rem
+  transform: translateX(-50%);
+}
+.donation {
+  min-height: 100vh;
+}
+footer {
+  height: 30vh;
+  background: linear-gradient(to bottom right, #41d497, #34a581, #2a9b84);
+}
+.sociallinks{
+  text-align: center;
+}
+.sociallinks img{
+  height:3rem;
+  width:3rem;
+  margin:3rem;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+.sociallinks img:hover{
+  filter: brightness(0.8);
+}
+.foottext p{
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+}
